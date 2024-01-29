@@ -7,7 +7,7 @@ public class PlayLadderAndSnake {
         Scanner kb = new Scanner(System.in);
 
         int attempts = 0;
-        int numOfPlayers = 0;
+        int numOfPlayers = 1;
         int totalNumOfAttempts = 3;
 
         System.out.println("Welcome to the Snake and Ladders game !!");
@@ -33,7 +33,8 @@ public class PlayLadderAndSnake {
         if (attempts == 4) {
             System.out.println("You have reached the maximum number of attempts, this program will now terminate.");
         } else {
-            LadderAndSnake game = new LadderAndSnake(numOfPlayers);
+            LadderAndSnake game = null;
+            game = new LadderAndSnake(numOfPlayers);
             game.play();
         }
         kb.close();
